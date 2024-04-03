@@ -1,0 +1,19 @@
+current directory: /home/jagaimo/Apr/Rails5/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+/home/jagaimo/.rbenv/versions/3.2.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/jagaimo/Apr/Rails5/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240401-31050-u4lq7f sitelibdir\=./.gem.20240401-31050-u4lq7f clean
+
+current directory: /home/jagaimo/Apr/Rails5/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240401-31050-u4lq7f sitelibdir\=./.gem.20240401-31050-u4lq7f
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/jagaimo/Apr/Rails5/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240401-31050-u4lq7f sitelibdir\=./.gem.20240401-31050-u4lq7f install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240401-31050-u4lq7f/debug
+
+current directory: /home/jagaimo/Apr/Rails5/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240401-31050-u4lq7f sitelibdir\=./.gem.20240401-31050-u4lq7f clean
