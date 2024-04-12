@@ -2,36 +2,44 @@
   <div class="container page">
     <div class="row">
       <div class="col-md-10 offset-md-1 col-xs-12">
-        <ul class="error-messages">
-          <li>That title is required</li>
+        <!-- <ul class="error-messages">
+          <li></li>
         </ul>
+        -->
 
-        <%= form_with model: @article do |form| %>
+        <%= form_with model: @article, local: true do |form| %>
           <div>
             <%= field_set_tag nil, class: "form-group" do %>
               <%= form.label :title %><br>
               <%= form.text_field :title, class: "form-control form-control-lg", placeholder: "Article Title" %>
+              <% @article.errors.full_messages_for(:title).each do |message| %>
+                <div><%= message %></div>
+              <% end %>
             <% end %>
             <%= field_set_tag nil, class: "form-group" do %>
               <%= form.label :name %><br>
               <%= form.text_field :name, class: "form-control", placeholder: "What's this article about?" %>
+              <% @article.errors.full_messages_for(:name).each do |message| %>
+                <div><%= message %></div>
+              <% end %>
             <% end %>
             <%= field_set_tag nil, class: "form-group" do %>
               <%= form.label :body %><br>
               <%= form.text_area :body, class: "form-control",  rows: "8", placeholder: "Write your article (in markdown)" %>
+              <% @article.errors.full_messages_for(:body).each do |message| %>
+                <div><%= message %></div>
+              <% end %>
             <% end %>
             <%= field_set_tag nil, class: "form-group" do %>
-              <%= form.label :tags %><br>
-              <%= form.text_field :tags, class: "form-control", placeholder: "Enter tags"  %>
-              <%# <div class="tag-list">
-                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
-              </div> %>
+              <%= form.label :tag_names %><br>
+              <%= form.text_field :tag_names, class: "form-control", placeholder: "Enter tags, separated by commas" %>
+              <% @article.errors.full_messages_for(:tag_names).each do |message| %>
+                <div><%= message %></div>
+              <% end %>
             <% end %>
             <%= form.submit "Publish Article", class: "btn btn-lg pull-xs-right btn-primary" %>
           </div>
         <% end %>
-
-        </div>
       </div>
     </div>
   </div>

@@ -21,11 +21,12 @@
               <%= form.text_area :body, class: "form-control",  rows: "8", placeholder: "Write your article (in markdown)" %>
             <% end %>
             <%= field_set_tag nil, class: "form-group" do %>
-              <%= form.label :tags %><br>
-              <%= form.text_field :tags, class: "form-control", placeholder: "Enter tags"  %>
-              <%# <div class="tag-list">
-                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
-              </div> %>
+
+                <%= form.label :tag_names %><br>
+                <%= form.text_field :tag_names, class: "form-control", placeholder: "Enter tags" %>
+               <%# <div class="tag-list">
+              #   <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
+              # </div> %>
             <% end %>
             <%= form.submit "Update Article", class: "btn btn-lg pull-xs-right btn-primary" %>
           </div>

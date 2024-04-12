@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_03_022326) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_11_064138) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -43,13 +43,29 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_03_022326) do
     t.string "title"
     t.string "name"
     t.text "body"
-    t.string "tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "button"
     t.integer "follow_number"
   end
 
+  create_table "tag_relationships", force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_tag_relationships_on_article_id"
+    t.index ["tag_id"], name: "index_tag_relationships_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "tag_relationships", "articles"
+  add_foreign_key "tag_relationships", "tags"
 end

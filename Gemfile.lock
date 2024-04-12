@@ -144,7 +144,7 @@ GEM
       racc (~> 1.4)
     psych (5.1.2)
       stringio
-    public_suffix (5.0.4)
+    public_suffix (5.0.5)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -185,7 +185,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
-    rake (13.1.0)
+    rake (13.2.1)
     rdoc (6.6.3.1)
       psych (>= 4.0.0)
     redis (5.1.0)
@@ -259,4 +259,4 @@ RUBY VERSION
    ruby 3.2.1p31
 
 BUNDLED WITH
-   2.5.6
+   2.4.6

@@ -36,10 +36,11 @@
         </p>
         <h2 id="introducing-ionic"><%= @article.title %></h2>
         <p><%= @article.body %></p>
-        <ul class="tag-list">
-          <li class="tag-default tag-pill tag-outline"><%= @article.tags %></li>
-          <li class="tag-default tag-pill tag-outline"><%= @article.tags %></li>
-        </ul>
+        <% @tags.each do |tag| %>
+          <ul class="tag-list">
+            <li class="tag-default tag-pill tag-outline"><%= tag.join(",") %></li>
+          </ul>
+        <% end %>
       </div>
     </div>
 

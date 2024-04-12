@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "model",
+  "steps": [
+    {
+      "file": "app/models/article.rb",
+      "description": "old_tagsが存在しない場合=新しく更新するタグに、既存のタグがある場合。既存タグ-更新タグでold_tagsがなくなる。\nold_tagsがない=更新タグだけを表示するために、既存タグを削除しなくてよい",
+      "line": 33
+    }
+  ]
+}

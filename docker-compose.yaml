@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/myapp
+      - ./tmp/db:/myapp/tmp/db
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"
+        max-file: "10"
