@@ -9,5 +9,5 @@ Things you may want to cover:
 3.2.1
 
 * troublesome  
-  It was troublesome to think about the relationship of models. That is why I tried to think big picture.
+  It was troublesome to think about the relationship of models. That is why I tried to think about big picture.
   
