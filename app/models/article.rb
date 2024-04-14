@@ -2,6 +2,7 @@ class Article < ApplicationRecord
 	has_one_attached :image
 	has_many :tag_relationships, dependent: :destroy
 	has_many :tags, through: :tag_relationships
+	belongs_to :author
 	validates :title, presence: true
 	validates :name, presence: true
 	validates :body, presence: true, length: { maximum: 500 }
