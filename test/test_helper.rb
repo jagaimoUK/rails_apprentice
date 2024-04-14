@@ -11,5 +11,10 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+
+    # テストユーザがログイン中の場合、trueをかえす。
+    def is_logged_in?
+      !session[:user_id].nil?
+    end
   end
 end
