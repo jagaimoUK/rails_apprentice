@@ -5,9 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version  
 3.2.1
 
-* troublesome
+* troublesome  
   It was troublesome to think about the relationship of models. That is why I tried to think big picture.
   
