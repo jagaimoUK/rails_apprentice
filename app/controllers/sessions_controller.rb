@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
+    
     if user && user.authenticate(params[:session][:password])
       # ログインの直前に必ずリセット
       reset_session
@@ -15,8 +15,13 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
     log_out
     redirect_to root_url, status: :see_other
   end
+
+  def load_user
+  2
+end
+  
 end

@@ -16,6 +16,15 @@ class Article < ApplicationRecord
 		end
 	end
 
+	def tag_list
+		params[:article][:tag_names].split(',')
+	end
+
+	def tags_as_string
+		tags.pluck(:name).join(',')
+	end 
+
+
 	def update_tags(latest_tags)
 		# すでに登録したタグがない
 		if self.tags.empty?
