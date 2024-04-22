@@ -1,4 +1,4 @@
-class CreateTagRelations < ActiveRecord::Migration[7.1]
+class CreateTagRelationships < ActiveRecord::Migration[7.1]
   def change
     create_table :tag_relationships do |t|
       t.references :article, foreign_key: true, null: false
